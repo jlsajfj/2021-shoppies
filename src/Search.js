@@ -14,10 +14,10 @@ class Search extends React.Component {
 
     handleChange(event){
         this.setState({searchValue: event.target.value});
+        this.setState({searchActive: true})
     }
 
     handleSubmit(event){
-        this.setState({searchActive: true})
         event.preventDefault();
     }
 
