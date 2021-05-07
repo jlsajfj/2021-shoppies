@@ -1,11 +1,9 @@
-import './SearchBody.css';
 import React from 'react';
 
 class SearchBody extends React.Component {
     constructor(props){
         super(props);
         this.state = {searchQuery: props.searchQuery};
-        console.log(this.state)
     }
 
     componentDidUpdate(prevProps) {
@@ -17,7 +15,7 @@ class SearchBody extends React.Component {
     render () {
         let { searchQuery } = this.state;
         return (
-            <div className="search-body">
+            <div className="search-border">
                 Search body text: {searchQuery}
             </div>
         )

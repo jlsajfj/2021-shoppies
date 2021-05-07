@@ -1,5 +1,4 @@
 import shopify_glyph from './shopify_glyph.svg';
-import './Header.css';
 
 function Header() {
   return (

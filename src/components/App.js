@@ -1,7 +1,7 @@
 import Header from './Header.js'
 import Search from './Search.js'
 import Nominations from './Nominations.js'
-import './App.css';
+import '../styles/App.css';
 
 function App() {
   return (

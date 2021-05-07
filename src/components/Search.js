@@ -1,6 +1,5 @@
 import search_icon from './search_icon.svg';
 import SearchBody from './SearchBody.js';
-import './Search.css';
 import React from 'react';
 
 class Search extends React.Component {
@@ -24,9 +23,9 @@ class Search extends React.Component {
     render () {
         let { searchActive, searchValue } = this.state;
         return (
-            <div className="search-body">
+            <div className="search-main">
                 <div className="search-title">Search for Movies!</div>
-                <form className="search-input" onSubmit={this.handleSubmit}>
+                <form className="search-border" onSubmit={this.handleSubmit}>
                     <img src={search_icon} alt="Magnifying glass" className="search-icon"/>
                     <input onChange={this.handleChange}
                         className="search-text"
