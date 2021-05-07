@@ -9,14 +9,17 @@ class Search extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        this.searchBodyChild = React.createRef();
     }
 
     handleChange(event){
         this.setState({searchValue: event.target.value});
-        this.setState({searchActive: true})
+        this.setState({searchActive: event.target.value.length})
     }
 
     handleSubmit(event){
+        this.searchBodyChild.current.searchForMovie();
         event.preventDefault();
     }
 
@@ -31,7 +34,7 @@ class Search extends React.Component {
                         className="search-text"
                         placeholder="Type here to search"/>
                 </form>
-                {searchActive?<SearchBody searchQuery={searchValue}/>:null}
+                {searchActive?<SearchBody searchQuery={searchValue} ref={this.searchBodyChild}/>:null}
             </div>
         )
     }

@@ -6,6 +6,10 @@ class SearchBody extends React.Component {
         this.state = {searchQuery: props.searchQuery};
     }
 
+    searchForMovie() {
+        alert(this.state.searchQuery)
+    }
+
     componentDidUpdate(prevProps) {
         if (prevProps.searchQuery !== this.props.searchQuery) {
             this.setState({searchQuery: this.props.searchQuery})
@@ -15,7 +19,7 @@ class SearchBody extends React.Component {
     render () {
         let { searchQuery } = this.state;
         return (
-            <div className="search-border">
+            <div className="search-border search-body">
                 Search body text: {searchQuery}
             </div>
         )
