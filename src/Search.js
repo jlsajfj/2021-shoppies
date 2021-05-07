@@ -1,26 +1,28 @@
 import search_icon from './search_icon.svg';
+import SearchBody from './SearchBody.js';
 import './Search.css';
 import React from 'react';
 
 class Search extends React.Component {
     constructor(props){
         super(props);
-        this.state = {value: ''};
+        this.state = {searchValue: '', searchActive: false};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event){
-        this.setState({value: event.target.value});
+        this.setState({searchValue: event.target.value});
     }
 
     handleSubmit(event){
-        console.log(this.state.value);
+        this.setState({searchActive: true})
         event.preventDefault();
     }
 
     render () {
+        let { searchActive, searchValue } = this.state;
         return (
             <div className="search-body">
                 <div className="search-title">Search for Movies!</div>
@@ -30,6 +32,7 @@ class Search extends React.Component {
                         className="search-text"
                         placeholder="Type here to search"/>
                 </form>
+                {searchActive?<SearchBody searchQuery={searchValue}/>:null}
             </div>
         )
     }
