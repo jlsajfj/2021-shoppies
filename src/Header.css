@@ -1,7 +1,7 @@
 .header {
     display: flex;
     background-color: #004C3F;
-    padding: 2vh 0 2vh 3vw;
+    padding: 1em 0 1em 3em;
     align-content: center;
   }
   
@@ -11,8 +11,8 @@
   
   .header > .title {
     color: white;
-    margin-left: 1vw;
-    margin-top: 0.5vw; /* if this is still here when i submit, i havent had a chance to fix it */
+    margin-left: 0.5em;
+    margin-top: 0.2em; /* if this is still here when i submit, i havent had a chance to fix it */
     font-size: 2rem;
     font-weight: bold;
     font-style: italic;
