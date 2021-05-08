@@ -5,7 +5,7 @@ import React from 'react';
 class Search extends React.Component {
     constructor(props){
         super(props);
-        this.state = {searchValue: '', searchActive: false};
+        this.state = {searchValue: ""};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,7 +15,6 @@ class Search extends React.Component {
 
     handleChange(event){
         this.setState({searchValue: event.target.value});
-        this.setState({searchActive: event.target.value.length})
     }
 
     handleSubmit(event){
@@ -24,7 +23,7 @@ class Search extends React.Component {
     }
 
     render () {
-        let { searchActive, searchValue } = this.state;
+        let { searchValue } = this.state;
         return (
             <div className="search-main">
                 <div className="search-title">Search for Movies!</div>
@@ -34,7 +33,7 @@ class Search extends React.Component {
                         className="search-text"
                         placeholder="Type here to search"/>
                 </form>
-                {searchActive?<SearchBody searchQuery={searchValue} ref={this.searchBodyChild}/>:null}
+                <SearchBody searchQuery={searchValue} ref={this.searchBodyChild}/>
             </div>
         )
     }

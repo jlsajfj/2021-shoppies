@@ -1,2 +1,16 @@
 .search-body {
+    transition: all 1s;
+    text-align: left;
+}
+
+.show-body {
+    opacity: 1;
+}
+
+.search-query {
+    font-weight: bold;
+}
+
+.search-movies {
+    flex-direction: column;
 }
