@@ -1,4 +1,5 @@
 import Header from './Header.js'
+import Banner from './Banner.js';
 import Search from './Search.js'
 import Nominations from './Nominations.js'
 import '../styles/App.css';
@@ -8,7 +9,7 @@ import React from 'react';
 class App extends React.Component {
   constructor(props){
     super(props)
-    
+
     this.updateNominations = this.updateNominations.bind(this)
   }
   updateNominations(){
@@ -17,6 +18,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <Banner />
         <Search />
         <Nominations />
       </div>
