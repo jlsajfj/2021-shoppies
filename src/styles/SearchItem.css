@@ -41,8 +41,14 @@
     color: white;
 }
 
-.locked {
+.selected {
     background-color: #004C3F;
+    color: white;
+    pointer-events: none;
+}
+
+.locked {
+    background-color: #555555;
     color: white;
     pointer-events: none;
 }
