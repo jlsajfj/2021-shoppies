@@ -16,9 +16,12 @@
 }
 
 .item-year {
+    color: #808080;
+}
+
+.item-nominate {
     margin-left: auto;
     margin-right: 0;
-    color: #808080;
 }
 
 

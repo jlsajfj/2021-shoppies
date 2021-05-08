@@ -23,7 +23,8 @@ class SearchItem extends React.Component {
         return (
         <div className="search-item fade-in">
             <div className="item-title" onClick={this.popupShow}>{this.state.movieData.Title}</div>
-            <div className="item-year">{this.state.movieData.Year}</div>
+            <div className="item-year">&nbsp;({this.state.movieData.Year})</div>
+            <button className="item-nominate">Nominate</button>
             { largeActive ? <MoviePopup data={movieData} hide={this.popupHide}/> : null }
         </div>
         );
