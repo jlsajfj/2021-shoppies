@@ -1,0 +1,16 @@
+.banner {
+    line-height: 2em;
+    background-color: #95BF47;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition-delay: opacity 0.25s;
+}
+
+.show-banner {
+    opacity: 1;
+    transform: translateY(0%)
+}

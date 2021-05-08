@@ -34,6 +34,12 @@
     border-radius: 1em;
 }
 
+.clear {
+    font-size: 1.5em;
+    color: #555555;
+    cursor: pointer;
+}
+
 @keyframes fadein {
     from {
         opacity:0;

@@ -6,11 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 import './styles/index.css';
 import './styles/Header.css';
+import './styles/Banner.css';
 import './styles/Search.css';
 import './styles/SearchBody.css';
 import './styles/SearchItem.css';
 import './styles/MoviePopup.css';
-
 import './styles/Nominations.css';
 
 ReactDOM.render(
