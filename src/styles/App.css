@@ -2,8 +2,17 @@
     opacity: 0;
 }
 
+.none {
+    display: none;
+}
+
 .error {
     color: red;
+}
+
+.fade-in {
+    animation: fadein 0.3s ease-in-out;
+    animation-fill-mode: backwards;
 }
 
 .border {
@@ -12,4 +21,13 @@
     border: 2px solid #000000;
     padding: 0.75em 2em 0.75em 2em;
     border-radius: 0.5em;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }

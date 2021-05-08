@@ -9,6 +9,7 @@ import './styles/Header.css';
 import './styles/Search.css';
 import './styles/SearchBody.css';
 import './styles/SearchItem.css';
+import './styles/MoviePopup.css';
 
 ReactDOM.render(
   <React.StrictMode>

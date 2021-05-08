@@ -41,10 +41,10 @@ class SearchBody extends React.Component {
     renderMovieList() {
         if(this.state.movieData){
             if(this.state.movieData.length===0){
-                return <div>&nbsp;Please enter at least 3 characters</div>
+                return <div className="error fade-in">&nbsp;Please enter at least 3 characters</div>
             }
             if(this.state.movieData.Response==="False"){
-                return <div className="error">{this.state.movieData.Error}</div>
+                return <div className="error fade-in">{this.state.movieData.Error}</div>
             }
 
             return <div className="search-movies">
@@ -52,7 +52,7 @@ class SearchBody extends React.Component {
             </div>
         } else {
             // I would do a proper 500 if i had time
-            return <div className="error">Some issue has occured</div>
+            return <div className="error fade-in">Some issue has occured</div>
         }
     }
 
@@ -64,12 +64,12 @@ class SearchBody extends React.Component {
 
     render () {
         let { searchQuery, isActive } = this.state;
-        let isVisible = " hidden";
+        let isVisible = " hidden none";
         if(isActive){
             isVisible = " border"
         }
         return (
-            <div className={"search-body"+isVisible}>
+            <div className={"search-body "+isVisible}>
                     Results for&nbsp;<span className="search-query">{searchQuery}</span>:&nbsp;
                     {this.renderMovieList()}
             </div>
