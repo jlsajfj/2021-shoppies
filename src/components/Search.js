@@ -25,7 +25,7 @@ class Search extends React.Component {
     render () {
         let { searchValue } = this.state;
         return (
-            <div className="search-main">
+            <div className="search-main box">
                 <div className="search-title">Search for Movies!</div>
                 <form className="search-entry border" onSubmit={this.handleSubmit}>
                     <img src={search_icon} alt="Magnifying glass" className="search-icon"/>

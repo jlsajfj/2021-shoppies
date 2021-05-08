@@ -23,6 +23,14 @@
     border-radius: 0.5em;
 }
 
+.box {
+    background-color: #F4F4F4;
+    margin: 2em 8em 0 8em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    border-radius: 1em;
+}
+
 @keyframes fadein {
     from {
         opacity:0;
