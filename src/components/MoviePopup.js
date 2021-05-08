@@ -6,7 +6,15 @@ class MoviePopup extends React.Component {
         this.state = { movieData: props.data }
     }
     render(){
-        return (<div className={"movie-popup fade-in"}>hello</div>)
+        return (
+        <div className="fade-in">
+            <div className="movie-overlay" onClick={ this.props.hide }>
+                <div className="movie-display border">
+                    abc
+                </div>
+            </div>
+        </div>
+        );
     }
 }
 

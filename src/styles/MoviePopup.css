@@ -1,2 +1,14 @@
-.movie-popup {
+.movie-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.movie-display {
+    width: 30em;
+    height: 40em;
+    margin: 8em auto;
+    background-color: #F4F4F4;
 }

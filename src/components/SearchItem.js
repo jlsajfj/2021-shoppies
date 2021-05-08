@@ -6,20 +6,25 @@ class SearchItem extends React.Component {
     constructor(props){
         super(props)
         this.state = {movieData: props.data, largeActive: false}
-        this.popup = this.popup.bind(this)
+        this.popupShow = this.popupShow.bind(this)
+        this.popupHide = this.popupHide.bind(this)
     }
 
-    popup(){
+    popupShow(){
         this.setState({largeActive: true})
+    }
+
+    popupHide(){
+        this.setState({largeActive: false})
     }
 
     render (){
         let {largeActive, movieData} = this.state;
         return (
         <div className="search-item fade-in">
-            <div className="item-title" onClick={this.popup}>{this.state.movieData.Title}</div>
+            <div className="item-title" onClick={this.popupShow}>{this.state.movieData.Title}</div>
             <div className="item-year">{this.state.movieData.Year}</div>
-            { largeActive ? <MoviePopup data={movieData}/> : null }
+            { largeActive ? <MoviePopup data={movieData} hide={this.popupHide}/> : null }
         </div>
         );
     }
