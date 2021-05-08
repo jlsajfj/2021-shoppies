@@ -22,6 +22,7 @@ class SearchBody extends React.Component {
             // to the actual results
 
             // this also occasionally causes duplicate entries being saved. known bug
+            // turns out this is a thing with the api sometimes returning duplicates.
             var movieDataFetched = localStorage.getItem(this.state.searchQuery);
             if(movieDataFetched == null){
                 // console.log('fetching remote')

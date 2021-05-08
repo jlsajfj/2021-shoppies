@@ -22,14 +22,14 @@ class SearchItem extends React.Component {
 
     nominate(){
         var nominations = JSON.parse(localStorage.getItem('nominated_movies'));
-        if(nominations){
+        if(nominations&&!nominations.includes(this.state.movieData.imdbID)){
             nominations.push(this.state.movieData.imdbID);
         } else {
             nominations = [this.state.movieData.imdbID];
         }
         localStorage.setItem('nominated_movies', JSON.stringify(nominations));
         this.setState({lockedButton: true})
-        console.log('hi')
+        console.log(nominations)
     }
 
     render (){
