@@ -8,6 +8,7 @@ import './styles/index.css';
 import './styles/Header.css';
 import './styles/Search.css';
 import './styles/SearchBody.css';
+import './styles/SearchItem.css';
 
 ReactDOM.render(
   <React.StrictMode>

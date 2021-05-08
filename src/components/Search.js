@@ -27,7 +27,7 @@ class Search extends React.Component {
         return (
             <div className="search-main">
                 <div className="search-title">Search for Movies!</div>
-                <form className="search-border" onSubmit={this.handleSubmit}>
+                <form className="search-entry border" onSubmit={this.handleSubmit}>
                     <img src={search_icon} alt="Magnifying glass" className="search-icon"/>
                     <input onChange={this.handleChange}
                         className="search-text"

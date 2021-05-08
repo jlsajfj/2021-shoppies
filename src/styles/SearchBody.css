@@ -12,5 +12,5 @@
 }
 
 .search-movies {
-    flex-direction: column;
+    display: block;
 }

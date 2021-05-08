@@ -1,0 +1,25 @@
+.search-item {
+    display: flex;
+    width: 100%;
+    margin: 0.5em 0 0.5em 0
+}
+
+.item-title {
+    color: #004C3F;
+    font-weight: bold;
+    transition: color 0.25s ease-in-out;
+}
+
+.item-title:hover {
+    color: #95BF47;
+}
+
+.item-year {
+    margin-left: auto;
+    margin-right: 0;
+    color: #808080;
+}
+
+.item-popup {
+    position: absolute;
+}

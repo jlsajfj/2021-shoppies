@@ -44,17 +44,15 @@ class SearchBody extends React.Component {
                 return <div>&nbsp;Please enter at least 3 characters</div>
             }
             if(this.state.movieData.Response==="False"){
-                return <div className="error">&nbsp;{this.state.movieData.Error}</div>
+                return <div className="error">{this.state.movieData.Error}</div>
             }
 
             return <div className="search-movies">
-                {this.state.movieData.Search.map( elem => {
-                    return <div><SearchItem data={elem}/></div>
-                })}
+                {this.state.movieData.Search.map( elem => <SearchItem data={elem} key={elem.imdbID}/> )}
             </div>
         } else {
             // I would do a proper 500 if i had time
-            return <div className="error">&nbsp;Some issue has occured</div>
+            return <div className="error">Some issue has occured</div>
         }
     }
 
@@ -68,11 +66,11 @@ class SearchBody extends React.Component {
         let { searchQuery, isActive } = this.state;
         let isVisible = " hidden";
         if(isActive){
-            isVisible = " search-border"
+            isVisible = " border"
         }
         return (
             <div className={"search-body"+isVisible}>
-                    Results for&nbsp;<span className="search-query">{searchQuery}</span>:
+                    Results for&nbsp;<span className="search-query">{searchQuery}</span>:&nbsp;
                     {this.renderMovieList()}
             </div>
         )
