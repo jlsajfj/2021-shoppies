@@ -22,6 +22,29 @@
 .item-nominate {
     margin-left: auto;
     margin-right: 0;
+    background-color: #E9F1DA;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.25em #111111;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    color: black;
+    cursor: pointer;
+}
+
+.item-nominate:hover {
+    background-color: #95BF47;
+}
+
+.item-nominate:active {
+    background-color: #004C3F;
+    color: white;
+}
+
+.locked {
+    background-color: #004C3F;
+    color: white;
+    pointer-events: none;
 }
 
 

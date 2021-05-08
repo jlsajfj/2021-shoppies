@@ -25,7 +25,7 @@ class MoviePopup extends React.Component {
     render(){
         return (
         <div className="fade-in">
-            <div className="movie-display border" ref={this.wrapperRef}>
+            <div className="border movie-display" ref={this.wrapperRef}>
                 abc
             </div>
         </div>

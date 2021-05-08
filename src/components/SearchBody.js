@@ -20,6 +20,8 @@ class SearchBody extends React.Component {
             // i'd much prefer it have a 5-minute rolling cache in the back
             // since this might persist past the point where changes have happened
             // to the actual results
+
+            // this also occasionally causes duplicate entries being saved. known bug
             var movieDataFetched = localStorage.getItem(this.state.searchQuery);
             if(movieDataFetched == null){
                 // console.log('fetching remote')
@@ -47,8 +49,9 @@ class SearchBody extends React.Component {
                 return <div className="error fade-in">{this.state.movieData.Error}</div>
             }
 
+            var nominations = JSON.parse(localStorage.getItem('nominated_movies'));
             return <div className="search-movies">
-                {this.state.movieData.Search.map( elem => <SearchItem data={elem} key={elem.imdbID}/> )}
+                {this.state.movieData.Search.map( elem => <SearchItem nominated={nominations} data={elem} key={elem.imdbID}/> )}
             </div>
         } else {
             // I would do a proper 500 if i had time
@@ -66,7 +69,7 @@ class SearchBody extends React.Component {
         let { searchQuery, isActive } = this.state;
         let isVisible = " hidden none";
         if(isActive){
-            isVisible = " border"
+            isVisible = " border outer-border"
         }
         return (
             <div className={"search-body "+isVisible}>
