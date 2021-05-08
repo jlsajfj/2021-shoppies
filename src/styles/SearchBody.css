@@ -14,3 +14,26 @@
 .search-movies {
     display: block;
 }
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.select-arrow {
+    transition: color 0.25s ease-in-out;
+    color: #004C3F;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto 0.25em auto 0.25em;
+}
+
+.select-arrow:hover {
+    color: #95BF47;
+}
+
+.locked-arrow {
+    pointer-events: none;
+    color: black;
+}

@@ -9,3 +9,11 @@
     margin: 8em 22em auto 22em;
     background-color: #E4E4E4;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

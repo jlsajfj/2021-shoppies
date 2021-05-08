@@ -29,7 +29,6 @@ class SearchItem extends React.Component {
         }
         localStorage.setItem('nominated_movies', JSON.stringify(nominations));
         this.setState({lockedButton: true})
-        console.log(nominations)
     }
 
     render (){

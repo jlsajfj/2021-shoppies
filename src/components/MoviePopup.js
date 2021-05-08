@@ -18,6 +18,7 @@ class MoviePopup extends React.Component {
 
     outerClick(event){
         if(this.wrapperRef && !this.wrapperRef.current.contains(event.target)){
+            event.preventDefault()
             this.props.hide()
         }
     }
@@ -25,8 +26,11 @@ class MoviePopup extends React.Component {
     render(){
         return (
         <div className="fade-in">
-            <div className="border movie-display" ref={this.wrapperRef}>
-                abc
+            {/* block clicks with an overlay */}
+            <div className="overlay">
+                <div className="border movie-display" ref={this.wrapperRef}>
+                    abc
+                </div>
             </div>
         </div>
         );
