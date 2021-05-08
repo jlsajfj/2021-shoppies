@@ -11,6 +11,8 @@ import './styles/SearchBody.css';
 import './styles/SearchItem.css';
 import './styles/MoviePopup.css';
 
+import './styles/Nominations.css';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
