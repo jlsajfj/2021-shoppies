@@ -1,14 +1,11 @@
-.movie-overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
 .movie-display {
-    width: 30em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     height: 40em;
-    margin: 8em auto;
-    background-color: #F4F4F4;
+    width: auto;
+    margin: 8em 22em auto 22em;
+    background-color: #E4E4E4;
 }
