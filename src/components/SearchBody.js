@@ -1,5 +1,7 @@
 import React from 'react';
 
+const { REACT_APP_OMDB_KEY } = process.env;
+
 import SearchItem from './SearchItem.js';
 
 class SearchBody extends React.Component {
@@ -30,7 +32,7 @@ class SearchBody extends React.Component {
             if(movieDataFetched){
                 this.setState({movieData: JSON.parse(movieDataFetched)})
             } else {
-                fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${process.env.REACT_APP_OMDB_KEY}&type=movie&page=${page}`)
+                fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${REACT_APP_OMDB_KEY}&type=movie&page=${page}`)
                     .then( res => res.json() )
                     .then( data => {
                         localStorage.setItem(`page_${page}_search_${searchQuery}`, JSON.stringify(data))
