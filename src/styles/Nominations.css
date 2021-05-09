@@ -13,6 +13,7 @@
 
 .poster {
     width: 12em;
+    border-radius: 1em;
 }
 
 .close-nomination {
@@ -20,6 +21,7 @@
     margin: 14em auto;
     padding: 0.25em 0.5em;
     border-radius: 0.3em;
+    height: inherit;
 }
 
 .movie-title {
@@ -59,7 +61,6 @@
     }
 
     .close-nomination {
-        height: inherit;
         margin: 10em auto;
     }
   }
