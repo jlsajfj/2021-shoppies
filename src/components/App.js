@@ -7,12 +7,8 @@ import '../styles/App.css';
 import React from 'react';
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
-
-    this.updateNominations = this.updateNominations.bind(this)
-  }
-  updateNominations(){
+  componentDidMount() {
+    document.title = "The Shoppies 2021"
   }
   render () {
     return (
