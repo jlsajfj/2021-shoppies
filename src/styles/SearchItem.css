@@ -30,6 +30,8 @@
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
     color: black;
     cursor: pointer;
+    height: 2em;
+    font-size: 1em; /* for some reason required for mobile to render buttons correctly */
 }
 
 .button:hover {

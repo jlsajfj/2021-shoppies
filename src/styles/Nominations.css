@@ -38,6 +38,7 @@
     align-items: center;
     font-size: 1.5em;
     padding-bottom: 1em;
+    text-align: center;
 }
 
 .sad-trophy {
@@ -45,3 +46,20 @@
     margin-bottom: 1em;
     width: 8em;
 }
+
+@media screen and (max-width: 500px) {
+    .nominations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-item {
+        margin: 1em 1em;
+        font-size: 2em;
+    }
+
+    .close-nomination {
+        height: inherit;
+        margin: 10em auto;
+    }
+  }

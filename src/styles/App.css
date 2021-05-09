@@ -57,3 +57,9 @@
         opacity:1;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .box {
+        margin: 2em 4em 0 4em;
+    }
+}
