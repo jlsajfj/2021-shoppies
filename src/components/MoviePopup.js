@@ -49,8 +49,8 @@ class MoviePopup extends React.Component {
         for (const key in movieData){
             if(key === "Ratings"){
                 continue;
-            } else if (key === "Poster") {
-                // do nothing
+            } else if (key === "Poster" || key === "Response") {
+                // skip
             } else {
                 const value = movieData[key]
                 elems.push(
