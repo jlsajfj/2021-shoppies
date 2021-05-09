@@ -9,6 +9,7 @@ class Nominations extends React.Component {
     this.state = { movies: nominated }
     
     this.onStorageUpdate = this.onStorageUpdate.bind(this)
+    this.removeMovie = this.removeMovie.bind(this)
   }
 
   onStorageUpdate(event) {
@@ -24,12 +25,20 @@ class Nominations extends React.Component {
     window.removeEventListener("storage", this.onStorageUpdate)
   }
 
+  removeMovie(indexOfMovie) {
+    console.log(indexOfMovie)
+    let movieTemp = this.state.movies;
+    const movieFinal = movieTemp.filter( (elem, index) => index !== indexOfMovie);
+    this.setState({movies: movieFinal})
+    localStorage.setItem('nominated_movies', JSON.stringify(movieFinal))
+  }
+
   render() {
     let { movies } = this.state;
     var inner = null;
     if(movies && movies.length !== 0){
       inner = <div className="nominations">
-        { movies.map( elem => <NominatedMovie data={elem} /> ) }
+        { movies.map( (elem, index) => <NominatedMovie data={elem} remove={this.removeMovie} idx={index}/> ) }
       </div>
     } else {
       inner = "you have no nominations"
