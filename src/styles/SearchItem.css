@@ -19,7 +19,7 @@
     color: #808080;
 }
 
-.item-nominate {
+.button {
     margin-left: auto;
     margin-right: 0;
     background-color: #E9F1DA;
@@ -32,11 +32,11 @@
     cursor: pointer;
 }
 
-.item-nominate:hover {
+.button:hover {
     background-color: #95BF47;
 }
 
-.item-nominate:active {
+.button:active {
     background-color: #004C3F;
     color: white;
 }

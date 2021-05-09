@@ -55,7 +55,7 @@ class SearchItem extends React.Component {
 
     render (){
         let {largeActive, movieData, lockedButton, selectedButton} = this.state;
-        let buttonState = "item-nominate";
+        let buttonState = "button";
         if(selectedButton) {
             buttonState += " selected"
         } else if (lockedButton) {

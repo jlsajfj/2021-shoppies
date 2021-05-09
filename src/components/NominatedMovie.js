@@ -6,7 +6,25 @@ class NominatedMovie extends React.Component {
     constructor(props) {
         super(props);
         this.state = JSON.parse(props.data)
+        
+        this.removeThis = this.removeThis.bind(this)
     }
+
+    removeThis() {
+        var movies = localStorage.getItem('nominated_movies');
+        const current = JSON.stringify(this.state);
+        if(movies){
+            var remaining = JSON.parse(movies)
+            if(remaining.includes(current)) {
+                const indexOfCur = remaining.indexOf(current);
+                console.log(indexOfCur)
+                remaining.splice(indexOfCur, 1)
+                localStorage.setItem('nominated_movies', JSON.stringify(remaining))
+                window.dispatchEvent( new Event('storage') )
+            }
+        }
+    }
+
     render() {
         let { Title, Year, imdbID, Poster } = this.state
         let posterElem;
@@ -17,10 +35,10 @@ class NominatedMovie extends React.Component {
         }
         return <div className="movie-item">
             <span className="movie-title">
-                {Title}&nbsp;<span className="item-year">({Year})</span>
+                {Title}&nbsp;({Year})
             </span>
             { posterElem }
-            <div className="close-nomination">Remove</div>
+            <div className="close-nomination button" onClick={this.removeThis}>Remove</div>
         </div>
     }
 }
