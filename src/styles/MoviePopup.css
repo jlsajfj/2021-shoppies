@@ -59,3 +59,27 @@
 .info-button {
     text-decoration: none;
 }
+
+@media screen and (max-width: 500px) {
+    .movie-display {
+        margin: 1em 2em auto 2em;
+        height: 30em;
+    }
+
+    .popup-body {
+        flex-direction: column;
+    }
+
+    .movie-poster {
+        width: 15em;
+        height: auto;
+    }
+
+    .popup-sidebar {
+        display: none;
+    }
+
+    .close-popup {
+        right: 2.5em;
+    }
+}
