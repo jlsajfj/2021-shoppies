@@ -1,8 +1,8 @@
 import React from 'react';
 
-const { REACT_APP_OMDB_KEY } = process.env;
-
 import SearchItem from './SearchItem.js';
+
+const { REACT_APP_OMDB_KEY } = process.env;
 
 class SearchBody extends React.Component {
     constructor(props){
