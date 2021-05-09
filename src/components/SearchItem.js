@@ -13,15 +13,15 @@ class SearchItem extends React.Component {
 
         const locked = props.nominated && props.nominated.length === 5
         const selected = props.nominated && props.nominated.includes(JSON.stringify(props.data))
-        this.state = { movieData: props.data, largeActive: false, lockedButton: locked, selectedButton: selected }
+        this.state = { movieData: props.data, popupActive: false, lockedButton: locked, selectedButton: selected }
     }
 
     popupShow(){
-        this.setState({largeActive: true})
+        this.setState({popupActive: true})
     }
 
     popupHide(){
-        this.setState({largeActive: false})
+        this.setState({popupActive: false})
     }
 
     lockButton() {
@@ -56,7 +56,7 @@ class SearchItem extends React.Component {
     }
 
     render (){
-        let {largeActive, movieData, lockedButton, selectedButton} = this.state;
+        let {popupActive, movieData, lockedButton, selectedButton} = this.state;
         let buttonState = "button";
         if(selectedButton) {
             buttonState += " selected"
@@ -68,7 +68,7 @@ class SearchItem extends React.Component {
             <div className="item-title" onClick={this.popupShow}>{this.state.movieData.Title}</div>
             <div className="item-year">&nbsp;({this.state.movieData.Year})</div>
             <button className={buttonState} onClick={this.nominate}>Nominate</button>
-            { largeActive ? <MoviePopup data={movieData} hide={this.popupHide}/> : null }
+            { popupActive ? <MoviePopup data={movieData} hide={this.popupHide}/> : null }
         </div>
         );
     }

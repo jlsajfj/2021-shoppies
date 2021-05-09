@@ -6,7 +6,7 @@
     left: 0;
     height: 40em;
     width: auto;
-    margin: 10em 22em auto 22em;
+    margin: 10em 20em auto 20em;
     background-color: #E4E4E4;
 }
 
@@ -16,4 +16,46 @@
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.close-popup {
+    position: fixed;
+    right: 14em;
+}
+
+.movie-title {
+    font-size: 1.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.movie-poster {
+    box-shadow: 0.3em 0.3em 0 0 black;
+    width: 20em;
+    border-radius: 1em;
+    height:fit-content;
+}
+
+.popup-body {
+    display: flex;
+}
+
+.popup-sidebar {
+    margin-left: 1em;
+    table-layout: fixed;
+}
+
+
+.sidebar-item {
+    display:flex;
+}
+
+.side-item-key {
+    width: 7em;
+    min-width: 7em;
+}
+
+.info-button {
+    text-decoration: none;
 }

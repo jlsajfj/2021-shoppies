@@ -27,17 +27,15 @@ class SearchBody extends React.Component {
             // this also occasionally causes duplicate entries being saved. known bug
             // turns out this is a thing with the api sometimes returning duplicates.
             var movieDataFetched = localStorage.getItem(`page_${page}_search_${searchQuery}`);
-            if(movieDataFetched == null){
-                // console.log('fetching remote')
+            if(movieDataFetched){
+                this.setState({movieData: JSON.parse(movieDataFetched)})
+            } else {
                 fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${process.env.REACT_APP_OMDB_KEY}&type=movie&page=${page}`)
                     .then( res => res.json() )
                     .then( data => {
                         localStorage.setItem(`page_${page}_search_${searchQuery}`, JSON.stringify(data))
                         this.setState({movieData: data})
                     })
-            } else {
-                // console.log('found local')
-                this.setState({movieData: JSON.parse(movieDataFetched)})
             }
         } else {
             this.setState({movieData: []})
