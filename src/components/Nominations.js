@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SadTrophy  from './sad-trophy.png'
 import NominatedMovie from './NominatedMovie.js'
 
 class Nominations extends React.Component {
@@ -40,9 +41,15 @@ class Nominations extends React.Component {
         { movies.map( (elem, index) => <NominatedMovie data={elem} remove={this.removeMovie} idx={index}/> ) }
       </div>
     } else {
-      inner = "you have no nominations"
+      inner = <div className="no-nominations">
+        <img src={SadTrophy} alt="Frowning trophy cup" className="sad-trophy" />
+        You have no nominations at the moment. Please search for a movie above.
+      </div>
     }
     return <div className="box">
+      <div className="title">
+        Your nominations:
+      </div>
       { inner }
     </div>
   }

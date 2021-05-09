@@ -31,3 +31,17 @@
     padding: 0.25em 0.25em;
     margin-top: 4em;
 }
+
+.no-nominations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+.sad-trophy {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    width: 8em;
+}
