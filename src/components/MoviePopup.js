@@ -72,7 +72,7 @@ class MoviePopup extends React.Component {
         }
         let leftSide = <div className="popup-left">
                 {posterElem}
-                <a href={`https://www.imdb.com/title/${imdbID}/`} className="item-title info-button" target="_blank">More info</a>
+                <a href={`https://www.imdb.com/title/${imdbID}/`} className="item-title info-button">More info</a>
             </div>
         let body = <div className="popup-body">
             { leftSide }
