@@ -2,6 +2,8 @@ import React from 'react';
 
 import MissingPoster from './poster-missing.png';
 
+const { REACT_APP_OMDB_KEY } = process.env;
+
 class MoviePopup extends React.Component {
     constructor(props){
         super(props);
@@ -33,7 +35,7 @@ class MoviePopup extends React.Component {
         if( movieDataFetched ) {
             return this.renderMovieData(JSON.parse(movieDataFetched))
         } else {
-            fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=${process.env.REACT_APP_OMDB_KEY}&type=movie`)
+            fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=${REACT_APP_OMDB_KEY}&type=movie`)
             .then( res => res.json() )
             .then( data => {
                 localStorage.setItem(`imdb_${imdbID}`, JSON.stringify(data))

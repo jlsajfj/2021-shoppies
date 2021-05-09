@@ -32,7 +32,7 @@ class SearchBody extends React.Component {
             if(movieDataFetched){
                 this.setState({movieData: JSON.parse(movieDataFetched)})
             } else {
-                fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${REACT_APP_OMDB_KEY}&type=movie&page=${page}`)
+                fetch(`https://www.omdbapi.com/?s=${searchQuery}&apikey=${REACT_APP_OMDB_KEY}&type=movie&page=${page}`)
                     .then( res => res.json() )
                     .then( data => {
                         localStorage.setItem(`page_${page}_search_${searchQuery}`, JSON.stringify(data))
