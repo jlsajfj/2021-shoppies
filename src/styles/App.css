@@ -40,6 +40,10 @@
     cursor: pointer;
 }
 
+.clear::after{
+    content: "✖";
+}
+
 @keyframes fadein {
     from {
         opacity:0;

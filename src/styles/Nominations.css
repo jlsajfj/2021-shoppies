@@ -4,6 +4,29 @@
     justify-content: space-around;
 }
 
+.movie-item {
+    width: 12em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .poster {
     width: 12em;
+}
+
+.close-nomination {
+    position: absolute;
+    background-color: #EEEEEE;
+    margin: 0 auto;
+}
+
+.movie-title {
+    position: absolute;
+    width: 8em;
+    text-align: center;
+    background-color: rgba(221,221,221,0.7);
+    border-radius: 0.5em;
+    padding: 0.25em 0.25em;
+    transform: translateY(100%)
 }

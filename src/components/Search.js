@@ -40,7 +40,7 @@ class Search extends React.Component {
                         className="search-text"
                         placeholder="Type here to search"
                         ref={this.searchBox}/>
-                    <div className="clear" onClick={this.clearText}>✖</div>
+                    <div className="clear" onClick={this.clearText} />
                 </form>
                 <SearchBody searchQuery={searchValue} ref={this.searchBodyChild}/>
             </div>

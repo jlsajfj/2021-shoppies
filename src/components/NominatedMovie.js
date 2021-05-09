@@ -11,12 +11,16 @@ class NominatedMovie extends React.Component {
         let { Title, Year, imdbID, Poster } = this.state
         let posterElem;
         if(Poster !== "N/A"){
-            posterElem = <img src={Poster} alt='Movie Poster' className="poster"/>;
+            posterElem = <img src={Poster} alt={Title} className="poster"/>;
         } else {
-            posterElem = <img src={MissingPoster} alt='Movie Poster' className="poster"/>;
+            posterElem = <img src={MissingPoster} alt={Title} className="poster"/>;
         }
-        return <div>
+        return <div className="movie-item">
+            <span className="movie-title">
+                {Title}&nbsp;<span className="item-year">({Year})</span>
+            </span>
             { posterElem }
+            <div className="close-nomination">Remove</div>
         </div>
     }
 }
