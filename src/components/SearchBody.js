@@ -87,13 +87,13 @@ class SearchBody extends React.Component {
             }
             return <div className="pagination">
                         <div className={"select-arrow"+leftClass} onClick={ () => this.changePage(page - 1) }>
-                            🡸
+                            &lt;
                         </div>
                         <div className="page-number">
                             Page {page} of { pageCount }
                         </div>
                         <div className={"select-arrow"+rightClass} onClick={ () => this.changePage(page + 1) }>
-                            🡺
+                            &gt;
                         </div>
                     </div>
         }
