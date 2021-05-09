@@ -5,10 +5,12 @@ import MoviePopup from './MoviePopup.js';
 class SearchItem extends React.Component {
     constructor(props){
         super(props)
+
         this.popupShow = this.popupShow.bind(this)
         this.popupHide = this.popupHide.bind(this)
         this.nominate = this.nominate.bind(this)
         this.lockButton = this.lockButton.bind(this)
+
         const locked = props.nominated && props.nominated.length === 5
         const selected = props.nominated && props.nominated.includes(JSON.stringify(props.data))
         this.state = { movieData: props.data, largeActive: false, lockedButton: locked, selectedButton: selected }

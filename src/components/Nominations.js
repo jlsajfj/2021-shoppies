@@ -26,11 +26,10 @@ class Nominations extends React.Component {
   }
 
   removeMovie(indexOfMovie) {
-    console.log(indexOfMovie)
     let movieTemp = this.state.movies;
     const movieFinal = movieTemp.filter( (elem, index) => index !== indexOfMovie);
-    this.setState({movies: movieFinal})
     localStorage.setItem('nominated_movies', JSON.stringify(movieFinal))
+    window.location.reload()
   }
 
   render() {
